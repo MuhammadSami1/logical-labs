@@ -12,6 +12,29 @@
       #b02aff 0%
     );
   }
+  .borderColor {
+    position: relative;
+
+    border-radius: 8px;
+    background-clip: padding-box;
+  }
+
+  .borderColor::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    padding: 3px;
+    background: linear-gradient(to right, #29cafe, #b02aff);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+  }
 
   .textColor {
     background: linear-gradient(
@@ -23,5 +46,36 @@
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .custom-underline {
+    position: relative;
+    display: inline-block;
+  }
+
+  .custom-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+      to right,
+      #29cafe 0%,
+      #b02aff 91%,
+      #b02aff 91%,
+      #b02aff 0%
+    );
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+
+  .custom-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  .Custom::placeholder {
+    padding-left: 1rem;
   }
 }
