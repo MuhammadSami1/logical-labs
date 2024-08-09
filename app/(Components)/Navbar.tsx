@@ -1,5 +1,6 @@
+"use client";
 import Link from "next/link";
-
+import { Link as ScrollLink } from "react-scroll";
 const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 text-white">
@@ -32,19 +33,21 @@ const Navbar = () => {
             <nav aria-label="Global">
               <ul className="flex items-center gap-10 text-lg font-semibold">
                 <li>
-                  <Link
+                  <ScrollLink
                     className="hover:textColor custom-underline transition"
-                    href="#"
+                    to="services"
+                    smooth={true}
+                    duration={500}
                   >
                     {" "}
                     Services{" "}
-                  </Link>
+                  </ScrollLink>
                 </li>
 
                 <li>
                   <Link
                     className="hover:textColor custom-underline transition"
-                    href="#"
+                    href="/about"
                   >
                     {" "}
                     About us{" "}
@@ -54,7 +57,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     className="custom-underline hover:textColor transition"
-                    href="#"
+                    href="/careers"
                   >
                     {" "}
                     Careers{" "}
