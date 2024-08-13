@@ -1,7 +1,17 @@
 "use client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
 import { Link as ScrollLink } from "react-scroll";
 const Navbar = () => {
+  const router = useRouter();
+
+  const aboutPage = () => {
+    router.push("/#about");
+  };
+  const servicesPage = () => {
+    router.push("/#about");
+  };
   return (
     <header className="sticky top-0 z-50 text-white">
       <div className="mx-auto mb-5 mt-10 max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -38,6 +48,7 @@ const Navbar = () => {
                     to="services"
                     smooth={true}
                     duration={500}
+                    onClick={servicesPage}
                   >
                     {" "}
                     Services{" "}
@@ -45,13 +56,16 @@ const Navbar = () => {
                 </li>
 
                 <li>
-                  <Link
+                  <ScrollLink
                     className="hover:textColor custom-underline transition"
-                    href="/about"
+                    to="about"
+                    smooth={true}
+                    duration={500}
+                    onClick={aboutPage}
                   >
                     {" "}
                     About us{" "}
-                  </Link>
+                  </ScrollLink>
                 </li>
 
                 <li>

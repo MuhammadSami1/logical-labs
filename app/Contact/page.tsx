@@ -85,7 +85,7 @@ const Contact = () => {
             <div className="mb-2 md:mb-0">Our Location:</div>
           </div>
           <div className="flex items-center justify-evenly gap-5 pt-0 sm:gap-24 sm:px-5 sm:pt-5 md:gap-24 md:space-x-1 md:px-0">
-            <div className="textColor sm:text-md mb-2 text-[10px] font-medium sm:text-sm sm:font-semibold md:mb-0 md:text-xl">
+            <div className="textColor mb-2 text-[10px] font-medium sm:text-sm sm:font-bold md:mb-0 md:text-[16px]">
               +92-307-4031207
             </div>
             <div className="mb-2 text-[10px] sm:text-sm md:mb-0">

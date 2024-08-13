@@ -5,6 +5,14 @@ import graphic from "@/public/images/graphic.svg";
 import video from "@/public/images/video.svg";
 import ui from "@/public/images/ui.svg";
 
+// Projects
+import ecommerce from "@/public/images/projects/ecommerce.svg";
+import mobileApp from "@/public/images/projects/mobile.svg";
+import dataDashboard from "@/public/images/projects/dataDesign.svg";
+import website from "@/public/images/projects/website.svg";
+import health from "@/public/images/projects/health.svg";
+import online from "@/public/images/projects/online.svg";
+
 export const profiles = [
   {
     id: 1,
@@ -95,5 +103,50 @@ export const images = [
   },
   {
     img: "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+];
+
+export const projects = [
+  {
+    id: 1,
+    title: "E-commerce Platform",
+    description:
+      "A fully-functional e-commerce platform with advanced search and filtering features, providing a seamless shopping experience and robust backend management.",
+    svg: ecommerce,
+  },
+  {
+    id: 2,
+    title: "Mobile Banking App",
+    description:
+      "A secure and user-friendly mobile banking application that offers real-time transaction tracking, account management, and advanced security features.",
+    svg: mobileApp,
+  },
+  {
+    id: 3,
+    title: "Data Analytics Dashboard",
+    description:
+      "A powerful analytics dashboard that provides insights, visualizations, and reporting tools for effective business intelligence and data-driven decision making.",
+    svg: dataDashboard,
+  },
+  {
+    id: 4,
+    title: "Website Revamp",
+    description:
+      "A complete overhaul of a corporate website to modernize its design, improve user navigation, and enhance responsiveness across all devices.",
+    svg: website,
+  },
+  {
+    id: 5,
+    title: "Healthcare System",
+    description:
+      "An integrated healthcare management system designed to streamline patient records, appointment scheduling, and medical billing for healthcare providers.",
+    svg: health,
+  },
+  {
+    id: 6,
+    title: "Online Learning Platform",
+    description:
+      "An online learning platform that offers interactive courses, progress tracking, and a community forum for students and educators to collaborate and share knowledge.",
+    svg: online,
   },
 ];
