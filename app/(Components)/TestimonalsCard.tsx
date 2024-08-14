@@ -16,12 +16,13 @@ const TestimonalsCard = ({
   message,
 }: TestimonalsType) => {
   return (
-    <div className="mx-auto max-w-xs rounded-lg bg-zinc-200">
+    <div className="relative mx-auto max-w-xs rounded-lg border border-gray-300 text-white">
+      <div className="absolute inset-0 h-full w-full scale-[0.80] transform rounded-full bg-red-500 bg-gradient-to-r from-blue-500 to-teal-500 opacity-35 blur-3xl" />
       <div className="px-8">
-        <div className="text-CustomColor1 pt-10 text-lg font-semibold">
-          {title}
+        <div className="pt-10 text-lg font-semibold">{title}</div>
+        <div>
+          <div className="py-7 text-sm">{message}</div>
         </div>
-        <div className="text-CustomColor1 py-7 text-sm">{message}</div>
         <div className="border border-gray-300"></div>
         <div className="flex items-center gap-5 py-7">
           <Image
@@ -32,7 +33,7 @@ const TestimonalsCard = ({
             width={60}
             height={60}
           />
-          <div className="text-CustomColor1 text-sm">
+          <div className="text-sm">
             <div className="py-1">{name}</div>
             <div>{address}</div>
           </div>

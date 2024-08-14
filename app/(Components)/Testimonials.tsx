@@ -10,7 +10,7 @@ const Testimonials = () => {
       <div className="textColor pb-20 pt-7 text-center text-2xl">
         Over 15,000 happy customers.
       </div>
-      <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-center gap-x-5 gap-y-10 pb-36 md:px-3">
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-y-10 pb-36 md:px-3">
         {profiles.map((profile) => (
           <TestimonalsCard
             key={profile.id}

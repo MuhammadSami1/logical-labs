@@ -1,19 +1,28 @@
 "use client";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 import { Link as ScrollLink } from "react-scroll";
+import Cart from "./Cart";
+
 const Navbar = () => {
+  const [open, setOpen] = useState(false);
+
+  const isOpen = () => {
+    setOpen(!open);
+  };
+
   const router = useRouter();
 
   const aboutPage = () => {
     router.push("/#about");
   };
   const servicesPage = () => {
-    router.push("/#about");
+    router.push("/#services");
   };
   return (
-    <header className="sticky top-0 z-50 text-white">
+    <header className="text-white">
       <div className="mx-auto mb-5 mt-10 max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
@@ -84,7 +93,7 @@ const Navbar = () => {
                     href="/Contact"
                   >
                     {" "}
-                    Contant us{" "}
+                    Contact us{" "}
                   </Link>
                 </li>
               </ul>
@@ -102,7 +111,10 @@ const Navbar = () => {
             </div>
 
             <div className="block md:hidden">
-              <button className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75">
+              <button
+                className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
+                onClick={isOpen}
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -122,6 +134,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+      {/* Cart */}
+      {open && <Cart />}
     </header>
   );
 };

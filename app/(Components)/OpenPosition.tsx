@@ -41,7 +41,12 @@ const jobs = [
   },
 ];
 
-const OpenPosition = () => {
+const OpenPosition = ({ query }) => {
+  const filterItems = jobs.filter((data) =>
+    data.title.toLowerCase().includes(query),
+  );
+  console.log(filterItems);
+
   return (
     <div className="mx-auto max-w-7xl">
       <hr className="mt-20"></hr>
@@ -53,7 +58,7 @@ const OpenPosition = () => {
         {jobs.map((items, i) => (
           <BackgroundGradient
             key={i}
-            className="rounded-md bg-zinc-100 px-10 py-7 text-center"
+            className="rounded-md bg-zinc-200 px-10 py-7 text-center"
           >
             <p className="mb-2 text-base font-semibold text-[#0F1439] duration-200 hover:text-[#3AD9C4] sm:text-xl">
               {items.title}
