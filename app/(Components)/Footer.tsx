@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Footer = () => {
   return (
@@ -124,12 +125,12 @@ const Footer = () => {
                     placeholder="Enter your email"
                   />
 
-                  <button
+                  <Link
+                    href="/sign-up"
                     className="backgroundColor block rounded-full px-8 py-3 font-medium text-white"
-                    type="submit"
                   >
                     Subscribe
-                  </button>
+                  </Link>
                 </div>
               </form>
             </div>

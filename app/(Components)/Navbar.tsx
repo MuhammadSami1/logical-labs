@@ -104,7 +104,7 @@ const Navbar = () => {
             <div className="sm:flex sm:gap-4">
               <Link
                 className="backgroundColor rounded-md px-5 py-2.5 text-sm font-medium text-white shadow"
-                href="#"
+                href="/sign-up"
               >
                 Login
               </Link>

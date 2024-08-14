@@ -3,9 +3,13 @@ import tick from "@/public/images/tick.svg";
 import Image from "next/image";
 import { useState } from "react";
 import OpenPosition from "@/app/(Components)/OpenPosition";
+import { useRouter } from "next/navigation";
 const JobOpening = () => {
   const [query, setQuery] = useState<string>("");
-
+  const router = useRouter();
+  const signUp = () => {
+    router.push("/sign-up");
+  };
   return (
     <>
       <div className="mx-auto mt-7 grid max-w-7xl grid-cols-1 px-2 md:grid-cols-2 md:px-0">
@@ -48,7 +52,10 @@ const JobOpening = () => {
               </div>
             </div>
             <div className="pt-10">
-              <button className="w-full rounded-md bg-white py-2 text-[#0F1439] hover:bg-[#0F1439] hover:text-white">
+              <button
+                onClick={signUp}
+                className="w-full rounded-md bg-white py-2 text-[#0F1439] hover:bg-[#0F1439] hover:text-white"
+              >
                 REGISTER NOW
               </button>
             </div>
