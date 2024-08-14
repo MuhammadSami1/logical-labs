@@ -2,6 +2,10 @@
 import Image from "next/image";
 import { BackgroundGradient } from "./ui/background-gradient";
 
+type QueryType = {
+  query: string;
+};
+
 const jobs = [
   {
     title: "Senior Bubble Developer",
@@ -41,7 +45,7 @@ const jobs = [
   },
 ];
 
-const OpenPosition = ({ query }) => {
+const OpenPosition = ({ query }: QueryType) => {
   const filterItems = jobs.filter((data) =>
     data.title.toLowerCase().includes(query),
   );
