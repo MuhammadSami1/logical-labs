@@ -8,7 +8,7 @@ const JobOpening = () => {
   const [query, setQuery] = useState<string>("");
   const router = useRouter();
   const signUp = () => {
-    router.push("/sign-up");
+    router.push("/auth/sign-up");
   };
   return (
     <>
