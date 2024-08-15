@@ -124,7 +124,7 @@ const Footer = () => {
                   />
 
                   <Link
-                    href="/auth/sign-up"
+                    href="/sign-up"
                     className="backgroundColor block rounded-full px-8 py-3 font-medium text-white"
                   >
                     Subscribe
