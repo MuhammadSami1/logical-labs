@@ -5,8 +5,10 @@ import { useState } from "react";
 
 import { Link as ScrollLink } from "react-scroll";
 import Cart from "./Cart";
+import { SignInButton, UserButton, useUser } from "@clerk/nextjs";
 
 const Navbar = () => {
+  const user = useUser();
   const [open, setOpen] = useState(false);
 
   const isOpen = () => {
@@ -102,12 +104,15 @@ const Navbar = () => {
 
           <div className="flex items-center gap-4">
             <div className="sm:flex sm:gap-4">
-              <Link
-                className="backgroundColor rounded-md px-5 py-2.5 text-sm font-medium text-white shadow"
-                href="/sign-up"
-              >
-                Login
-              </Link>
+              {user.isSignedIn ? (
+                <UserButton />
+              ) : (
+                <SignInButton>
+                  <span className="backgroundColor rounded-md px-5 py-2.5 text-sm font-medium text-white shadow">
+                    Login
+                  </span>
+                </SignInButton>
+              )}
             </div>
 
             <div className="block md:hidden">

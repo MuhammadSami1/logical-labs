@@ -48,10 +48,9 @@ export default function Cart() {
                         <Link href="/#services">services</Link>
                         <Link href="/#about">About</Link>
                         <Link href="/careers">Careers</Link>
-                        <Link href="/">Log Out</Link>
                       </ul>
                     </div>
-                    <div className="pt-5">
+                    <div className="pt-1">
                       <button
                         onClick={contactPage}
                         className="backgroundColor rounded-md px-5 py-2 text-white"

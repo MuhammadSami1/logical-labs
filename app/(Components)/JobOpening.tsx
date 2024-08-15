@@ -26,7 +26,7 @@ const JobOpening = () => {
               id="search"
               placeholder="Search"
               onChange={(e) => setQuery(e.target.value.toLowerCase())}
-              className="w-full rounded-md py-4 placeholder:px-4"
+              className="w-full rounded-md py-4 placeholder:pl-2"
             />
           </div>
         </div>

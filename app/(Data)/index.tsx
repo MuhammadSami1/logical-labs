@@ -150,3 +150,42 @@ export const projects = [
     svg: online,
   },
 ];
+
+export const jobs = [
+  {
+    title: "Senior Bubble Developer",
+    position: 1,
+    department: "Software Development Department",
+    address: "552 College Road, Block 15, Sector B-1, Lahore, Lahore",
+  },
+  {
+    title: "ReactJS Developer",
+    position: 2,
+    department: "Software Development Department",
+    address: "552 College Road, Block 15, Sector B-1, Lahore, Lahore",
+  },
+  {
+    title: "Python/Django Developer",
+    position: 1,
+    department: "Software Development Department",
+    address: "552 College Road, Block 15, Sector B-1, Lahore, Lahore",
+  },
+  {
+    title: "SQA Engineer",
+    position: 1,
+    department: "SQA Department",
+    address: "552 College Road, Block 15, Sector B-1, Lahore, Lahore",
+  },
+  {
+    title: "Lead React JS Developer",
+    position: 1,
+    department: "Software Development Department",
+    address: "552 College Road, Block 15, Sector B-1, Lahore, Lahore",
+  },
+  {
+    title: "Front Desk Officer",
+    position: 1,
+    department: "HR & Admin Department",
+    address: "552 College Road, Block 15, Sector B-1, Lahore, Lahore",
+  },
+];
