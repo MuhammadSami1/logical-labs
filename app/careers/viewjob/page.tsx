@@ -47,7 +47,7 @@ const Viewjob = () => {
         <hr className="mt-5"></hr>
       </div>
 
-      <div className="mr-auto max-w-5xl px-4 md:px-16">
+      <div className="px-4 md:px-16 lg:mx-auto lg:max-w-7xl">
         <div className="my-20 text-sm text-gray-400">
           Cogent Labs{" "}
           <span className="text-white">
