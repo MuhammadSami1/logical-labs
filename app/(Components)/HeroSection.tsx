@@ -1,11 +1,13 @@
+"use client";
 import Link from "next/link";
+import ParticlesComponent from "./particles";
 
 const HeroSection = () => {
   return (
-    <section className="text-white">
+    <section className="relative text-white">
       <div className="mx-auto max-w-screen-xl px-4 pb-28 pt-16 lg:flex lg:h-screen lg:items-center">
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-3xl font-extrabold text-white sm:text-5xl">
+          <h1 className="text-3xl font-extrabold text-white sm:text-4xl md:text-5xl">
             Innovative IT Services
             <span className="textColor mt-2 sm:block">
               {" "}
@@ -27,6 +29,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
+      <ParticlesComponent id="particles" />
     </section>
   );
 };

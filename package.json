@@ -12,6 +12,7 @@
     "@clerk/nextjs": "^5.3.1",
     "@headlessui/react": "^2.1.2",
     "@react-three/fiber": "^8.17.5",
+    "@tsparticles/all": "^3.5.0",
     "@tsparticles/engine": "^3.5.0",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.5.0",
@@ -22,6 +23,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-scroll": "^1.9.0",
+    "react-tsparticles": "^2.12.2",
     "tailwind-merge": "^2.5.2",
     "three": "^0.167.1",
     "vercel": "^36.0.0"
