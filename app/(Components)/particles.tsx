@@ -1,16 +1,22 @@
-import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useMemo, useState } from "react";
-// import { loadAll } from "@/tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import {
+  type Container,
+  type ISourceOptions,
+  MoveDirection,
+} from "@tsparticles/engine";
+// import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
-type ParticlesComponentProps = {
+type IdType = {
   id: string;
 };
 
-const ParticlesComponent = (props: ParticlesComponentProps) => {
+const App = ({ id }: IdType) => {
   const [init, setInit] = useState(false);
+
   // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -26,11 +32,11 @@ const ParticlesComponent = (props: ParticlesComponentProps) => {
     });
   }, []);
 
-  const particlesLoaded = (container) => {
+  const particlesLoaded = async (container?: Container): Promise<void> => {
     console.log(container);
   };
 
-  const options = useMemo(
+  const options: ISourceOptions = useMemo(
     () => ({
       background: {
         color: {
@@ -38,24 +44,16 @@ const ParticlesComponent = (props: ParticlesComponentProps) => {
         },
       },
 
-      style: {
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-      },
-
       fpsLimit: 120,
       interactivity: {
         events: {
           onClick: {
             enable: true,
-            mode: "repulse",
+            mode: "push",
           },
           onHover: {
             enable: true,
-            mode: "grab",
+            mode: "repulse",
           },
         },
         modes: {
@@ -70,22 +68,22 @@ const ParticlesComponent = (props: ParticlesComponentProps) => {
       },
       particles: {
         color: {
-          value: "#FFFFFF",
+          value: "#ffffff",
         },
         links: {
-          color: "#FFFFFF",
+          color: "#ffffff",
           distance: 150,
           enable: true,
           opacity: 0.3,
           width: 1,
         },
         move: {
-          direction: "none",
+          direction: MoveDirection.none,
           enable: true,
           outModes: {
             default: "bounce",
           },
-          random: true,
+          random: false,
           speed: 1,
           straight: false,
         },
@@ -110,7 +108,12 @@ const ParticlesComponent = (props: ParticlesComponentProps) => {
     [],
   );
 
-  return <Particles id={props.id} init={particlesLoaded} options={options} />;
-};
+  if (init) {
+    return (
+      <Particles id={id} particlesLoaded={particlesLoaded} options={options} />
+    );
+  }
 
-export default ParticlesComponent;
+  return <></>;
+};
+export default App;

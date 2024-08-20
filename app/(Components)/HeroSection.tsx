@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import ParticlesComponent from "./particles";
+import App from "./particles";
 
 const HeroSection = () => {
   return (
@@ -29,7 +29,9 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <ParticlesComponent id="particles" />
+      <div className="absolute left-0 top-0 h-full w-full">
+        <App id="particles" />
+      </div>
     </section>
   );
 };
